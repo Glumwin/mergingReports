@@ -40,7 +40,7 @@ if (Test-Path "cluster_organizer.spec") {
 
 # Компилируем приложение
 Write-Host "Компилируем приложение..." -ForegroundColor Yellow
-pyinstaller --onefile --windowed --name "Cluster Organizer" --icon "icon.ico" --distpath "dist" cluster_organizer.py
+pyinstaller --onefile --windowed --name "Cluster Organizer" cluster_organizer.py
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host "=== Сборка завершена успешно! ===" -ForegroundColor Green

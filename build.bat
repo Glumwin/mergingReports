@@ -41,7 +41,7 @@ if exist "cluster_organizer.spec" (
 
 REM Компилируем приложение
 echo Компилируем приложение...
-pyinstaller --onefile --windowed --name "Cluster Organizer" --distpath "dist" cluster_organizer.py
+pyinstaller --onefile --windowed --name "Cluster Organizer" cluster_organizer.py
 
 if %errorlevel% equ 0 (
     echo === Сборка завершена успешно! ===
