@@ -103,3 +103,9 @@ dmypy.json
 cluster_config.json
 *.csv
 !example_*.csv
+
+# Allow images
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
