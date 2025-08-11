@@ -101,8 +101,6 @@ dmypy.json
 
 # Project specific
 cluster_config.json
-*.csv
-!example_*.csv
 
 # Allow images
 !*.png
