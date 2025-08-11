@@ -1,8 +1,8 @@
 @echo off
-echo === Сверхбыстрая сборка ===
+echo === Быстрая сборка с оптимизацией ===
 
-echo Компилируем...
-pyinstaller --onefile --windowed --clean cluster_organizer.py
+echo Компилируем с оптимизацией...
+pyinstaller --clean cluster_organizer.spec
 
 if %errorlevel% equ 0 (
     echo === Готово! ===

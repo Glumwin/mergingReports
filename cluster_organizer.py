@@ -5,8 +5,17 @@ import os
 # Настройка кодировки для Windows
 if sys.platform == 'win32':
     os.environ['PYTHONIOENCODING'] = 'utf-8'
-    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
-    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    # Безопасная настройка stdout/stderr для скомпилированного приложения
+    if sys.stdout is not None:
+        try:
+            sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+        except:
+            pass
+    if sys.stderr is not None:
+        try:
+            sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+        except:
+            pass
 
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox, scrolledtext
