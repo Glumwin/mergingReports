@@ -102,6 +102,11 @@ dmypy.json
 # Project specific
 cluster_config.json
 
+# Build artifacts
+dist/
+build/
+*.spec
+
 # Allow images
 !*.png
 !*.jpg
