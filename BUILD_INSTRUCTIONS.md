@@ -2,17 +2,7 @@
 
 ## Автоматическая сборка
 
-### Вариант 1: Быстрая сборка (рекомендуется)
-```cmd
-build_simple.bat
-```
-
-### Вариант 2: PowerShell
-```powershell
-.\build.ps1
-```
-
-### Вариант 3: Полная сборка
+### Быстрая сборка
 ```cmd
 build.bat
 ```
@@ -26,18 +16,17 @@ pip install -r requirements.txt
 
 ### 2. Компиляция с PyInstaller
 ```bash
-pyinstaller --onefile --windowed --name "Cluster Organizer" cluster_organizer.py
+pyinstaller --onefile --windowed --clean cluster_organizer.py
 ```
 
 ### 3. Результат
-Исполняемый файл будет создан в папке `dist/Cluster Organizer.exe`
+Исполняемый файл будет создан в папке `dist/cluster_organizer.exe`
 
 ## Параметры сборки
 
 - `--onefile` - создает один исполняемый файл
 - `--windowed` - запускает приложение без консольного окна
-- `--name "Cluster Organizer"` - задает имя выходного файла
-- `--icon icon.ico` - добавляет иконку (если есть файл icon.ico)
+- `--clean` - очищает кэш для ускорения сборки
 
 ## Требования
 
